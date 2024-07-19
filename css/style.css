@@ -1,0 +1,1670 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap') */
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(220, 100%, 97%);
+  --black-color-light: hsl(220, 100%, 97%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #1f1f1f;
+  --body-color: #fff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: .938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+/* :root { */
+  /* --header-height: 3.5rem; */
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /* --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%); */
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  /* --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem; */
+
+  /*========== Font weight ==========*/
+  /* --font-regular: 400;
+  --font-semi-bold: 600; */
+
+  /*========== z index ==========*/
+  /* --z-tooltip: 10;
+  --z-fixed: 100; */
+/* } */
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+#main{
+  position: relative;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+ul {
+  list-style: none;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/* ================================================================================================================================================================================================================= HOME PAGE STYLE CSS ==================================================================================== */
+
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black-color);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+}
+
+.nav__logo, 
+.nav__burger, 
+.nav__close {
+  color: var(--white-color);
+}
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50vw;
+  padding-left: 5px;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__logo i {
+  font-weight: initial;
+  font-size: 1.25rem;
+}
+
+header nav .nav__data a img{
+  height: 20vh;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger, 
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close {
+  opacity: 0;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+  }
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+  .nav__list {
+    background-color: var(--black-color);
+    padding-top: 1rem;
+  }
+}
+
+.nav__link {
+  color: #017ac3;
+  text-transform: uppercase;
+  background-color: var(--black-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+}
+
+.nav__link:hover {
+  background-color: var(--black-color-light);
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown__item {
+  cursor: pointer;
+}
+
+.dropdown__arrow {
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: transform .4s;
+}
+
+.dropdown__link, 
+.dropdown__sublink {
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  color: var(--white-color);
+  background-color: var(--black-color-light);
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color .3s;
+}
+
+.dropdown__link i, 
+.dropdown__sublink i {
+  font-size: 1.25rem;
+  font-weight: initial;
+}
+
+.dropdown__link:hover, 
+.dropdown__sublink:hover {
+  background-color: #fff;
+}
+
+.dropdown__menu, 
+.dropdown__submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+}
+
+/* Show dropdown menu & submenu */
+.dropdown__item:hover .dropdown__menu, 
+.dropdown__subitem:hover > .dropdown__submenu {
+  max-height: 1000px;
+  transition: max-height .4s ease-in;
+}
+
+/* Rotate dropdown icon */
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/*=============== DROPDOWN SUBMENU ===============*/
+.dropdown__add {
+  margin-left: auto;
+}
+
+.dropdown__sublink {
+  background-color: var(--black-color-lighten);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 500px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .nav__link {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+    column-gap: .25rem;
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+
+  .dropdown__item, 
+  .dropdown__subitem {
+    position: relative;
+  }
+
+  .dropdown__menu, 
+  .dropdown__submenu {
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, top .3s;
+  }
+
+  .dropdown__link, 
+  .dropdown__sublink {
+    padding-inline: 1rem 3.5rem;
+  }
+
+  .dropdown__subitem .dropdown__link {
+    padding-inline: 1rem;
+  }
+
+  .dropdown__submenu {
+    position: absolute;
+    left: 100%;
+    top: .5rem;
+  }
+
+  /* Show dropdown menu */
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+
+  /* Show dropdown submenu */
+  .dropdown__subitem:hover > .dropdown__submenu {
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+}
+
+/* ================== SUB NAVBAR =========================== */
+
+header .sub-nav{
+  padding-left: 5vw;
+  background-color: #E4002B;
+  height: 35px;
+  /* gap: 10vw; */
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+header .sub-nav .info{
+  display: flex;
+  gap: 2vw;
+  flex-direction: row;
+}
+
+header .sub-nav .info .phone-number{
+  display: flex;
+  padding-top: 0.5vw;
+  gap: 0.6vw;
+  flex-direction: row;
+}
+header .sub-nav .info .phone-number i{
+  font-size: 1.2vw;
+  color: #fff;
+}
+
+header .sub-nav .info .phone-number p{
+  font-size: 1vw;
+  color: #fff;
+}
+header .sub-nav .info .email-address{
+  padding-top: 0.5vw;
+  display: flex;
+  gap: 0.6vw;
+  flex-direction: row;
+}
+header .sub-nav .info .email-address i{
+  font-size: 1.3vw;
+  color: #fff;
+}
+
+header .sub-nav .info .email-address p{
+  font-size: 1vw;
+  color: #fff;
+}
+
+header .sub-nav .get-quote h1{
+  color: #fff;
+  font-size: 1vw;
+  text-transform: uppercase;
+  padding-top: 0.5vw;
+  padding-right: 5vw;
+}
+/* ==========================  HERO SECTION ================================== */
+
+/* #hero-section #slider-1 .swiper-slide img{
+  max-height: 100vh;
+  width: 100%;
+}
+
+
+#swiper-1 .swiper-pagination {
+  bottom: 2rem;
+}
+
+#swiper-1 .swiper-pagination-bullet {
+  margin: 0 .5rem;
+  opacity: 1;
+  background-color: var(--white-color);
+  width: .75rem;
+  height: .75rem;
+}
+
+#swiper-1 .swiper-pagination-bullet-active {
+  background-color: var(--black-color);
+} */
+
+.overlay-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.496); /* Adjust the alpha value for the desired transparency */
+}
+
+#caro .another-img{
+  display: none;
+}
+
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+}
+
+
+.banner-carousel{
+	margin-top: 7vw;
+	width: 100%;
+	height: 50vh;
+}
+
+  .background-tint1 { position: relative; }
+
+.background-tint1::after {
+  content: "";
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008d;
+  margin: auto;
+}
+
+.carousel-inner{
+	width: 100%;
+	height: 65vh;
+	/* border: 2px solid green; */
+}
+.carousel-inner .carousel-item
+{
+	width: 100%;
+	height: 50vh;
+}
+.carousel-inner .carousel-item img{
+	object-fit: cover;
+	width: 100%;
+	height: 500px;
+}
+.carousel-caption {
+	bottom: 0px;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+  color: #fff;
+  font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 1.2vw; 
+}
+.carousel-caption a {
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #E4002B;
+	padding: 10px 20px;
+	display: inline-block;
+	color: #fff;
+  border: 2px solid #fff;
+	margin-top: 10px;
+  transition: all ease-in 0.3s;
+}
+
+.carousel-caption a:hover{
+  background-color: #fff;
+  color: #E4002B;
+  border: 3px solid #E4002B;
+}
+
+.navbar-nav a {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.navbar-light .navbar-brand {
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+.w-100 {
+	height: 100vh;
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+	background: #fff;
+}
+@media only screen and (max-width: 767px) {
+	.navbar-nav {
+		text-align: center;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.carousel-caption {
+		bottom: 165px;
+	}
+	.carousel-caption h5 {
+		font-size: 17px;
+	}
+	.carousel-caption a {
+		padding: 5px 10px;
+		font-size: 15px;
+	}
+}
+
+/* ================================== TRACKING NUMBER ================================= */
+
+#home-tracking-section{
+  /* border: 1px solid red; */
+  padding: 10vw 0vw 2vw 0;
+}
+
+#home-tracking-section .tracking-div
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home-tracking-section .tracking-div .home-tracking-heading h1
+{
+  font-size: 2.5vw;
+  padding-bottom: 0.4vw;
+  text-align: center;
+}
+
+#home-tracking-section .tracking-div .home-tracking-heading p
+{
+  font-size: 1vw;
+  padding-bottom: 1vw;
+  text-align: center;
+}
+
+#home-tracking-section .tracking-div .home-tracking-input
+{
+  display: flex;
+  flex-direction: row;
+  padding-top: 1vw;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+}
+
+#home-tracking-section .tracking-div .home-tracking-input input
+{
+  outline: none;
+  height: 3vw;
+  width: 19vw;
+}
+
+#home-tracking-section .tracking-div .home-tracking-input input::placeholder{
+  padding-left: 1vw;
+  color: #1f1f1f;
+}
+
+#home-tracking-section .tracking-div .home-tracking-input button{
+  width: 8vw;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  background-color: #E4002B;
+  border: none;
+  transition: 0.3s ease-in;
+  height: 2.9vw;
+}
+#home-tracking-section .tracking-div .home-tracking-input button:hover
+{
+  background-color: white;
+  border: 2px solid #E40028;
+  color: #E40028;
+}
+
+/* =============================================== HOME ABOUT SECTION ================================= */
+
+#home-about-section{
+  height: 750px;
+  /* border: 1px solid red; */
+  width: 100%;
+  background-image: url(/Assests/img/home_about_bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+#swiper-2 .swiper-wrapper .swiper-slide
+{
+  margin-top: 7.5vw;
+  height: 100%;
+  width: 100%;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div{
+  display: flex;
+  background-color: #ffffffd5;
+  width: 80vw;
+  height: 100%;
+  border-radius: 30px;
+  margin-left: 9vw;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 18px 0px rgba(47, 19, 78, 0.08);
+  flex-direction: row;
+  height: 100%;
+  gap: 2vw;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-img
+{
+  width: 50%;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-img img{
+  width: 600px;
+  height: 500px;
+  padding: 1vw;
+  object-fit: contain;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text{
+  padding: 7vw 1vw 5vw 1vw;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text h2{
+  font-size: 2.7vw;
+  color: #4e3668;
+  line-height: 2.5vw;
+  padding-bottom: 1vw;
+}
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text h6{
+  color: #FE320A;
+  font-size: 1.2vw;
+  padding-bottom: 1vw;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text p{
+  color: #252526;
+  font-size: 1vw;
+  width: 75%;
+}
+
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text button{
+  transition: all 0.3s ease-in;
+  background-color: #0000ee;
+  color: #fff;
+  width: 150px;
+  height: 45px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1vw;
+  margin-top: 2vw;
+  cursor: pointer;
+}
+#swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text button:hover{
+  background-color: #fff;
+  border: 2px solid #0000ee;
+  color: #0000ee;
+}
+/* ===================================== END =========================== */
+/* ========================================== HOME SERVICE SECTION ========================================================== */
+
+#home-service-section{
+  padding: 3vw 5vw;
+}
+
+#home-service-section .home-service-section-div .home-service-section-text h1
+{
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  margin-bottom: 1.2vw;
+}
+
+#home-service-section .home-service-section-div .home-service-section-text .home-service-section-main-text
+ {
+  display: flex;
+  flex-direction: row;
+  gap: 15vw;
+  margin-bottom: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-service-section .home-service-section-div .home-service-section-text .home-service-section-main-text h2{
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* ========================= SERVICE IMAGE INF0 ============== */
+
+.home-service-section-div-image-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2vw;
+  padding-left: 3vw;
+}
+
+.home-service-section-div-image-info .wrapper .image{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.home-service-section-div-image-info .wrapper
+{
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.home-service-section-div-image-info .image{
+  position: relative;
+  width: 350px;
+}
+
+.home-service-section-div-image-info .image img{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.home-service-section-div-image-info .content{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #e4002ad0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  gap: 0vw;
+  transition: 0.6s;
+}
+
+.home-service-section-div-image-info .content i{
+  font-size: 2.5vw;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.home-service-section-div-image-info .content h1{
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+.home-service-section-div-image-info .content p{
+  text-align: center;
+  font-size: 1vw;
+  color: #fff;
+}
+.home-service-section-div-image-info .content a
+{
+  text-align: center;
+  font-size: 1vw;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+.home-service-section-div-image-info .content a:hover{
+  color: #0000ee;
+  border-bottom: 1px solid #0000ee;
+}
+
+.home-service-section-div-image-info .content:hover{
+  opacity: 1;
+}
+
+.home-service-section-div-image-info .content > *{
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.home-service-section-div-image-info .content:hover > *{
+  transform: translateY(0px);
+
+}
+
+.home-service-section-div-image-info1{
+  margin-top: 4.5vw;
+}
+
+/* ================================ YOUR PACKAGE YOUR RULES ========================================== */
+#your-package-your-rules{
+  padding: 3vw 5vw;
+}
+
+#your-package-your-rules .your-package-rules .your-package-rules-text h2
+{
+font-size: 1.1vw;
+text-transform: uppercase;
+color: #4D148C;
+font-weight: 600;
+margin-bottom: 1.3vw;
+}
+
+#your-package-your-rules .your-package-rules .your-package-rules-text h1{
+  font-size: 2vw;
+  width: 40%;
+  margin-bottom: 1.5vw;
+}
+ /* ===============================  FEATURE IMAGE INFO =============================== */
+.your-package-rules-features
+{
+  padding: 1.5vw 4.5vw;
+}
+
+.your-package-rules-features .your-package-rules-features1{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+
+.your-package-rules-features2{
+  margin-top: 3.5vw;
+}
+
+.your-package-rules-features .transparency-pricing
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  
+}
+
+.your-package-rules-features .transparency-pricing i{
+  font-size: 2.5vw;
+  color: #E4002B;
+}
+
+.your-package-rules-features .transparency-pricing h1{
+  font-size: 1.2vw;
+  color: #1f1f1f;
+  transition: all 0.3s ease-in-out;
+}
+
+.your-package-rules-features .transparency-pricing h1:hover{
+  font-size: 1.2vw;
+  color: #FF5E14;
+}
+
+.your-package-rules-features .transparency-pricing p{
+  font-size: 1vw;
+  color: #1f1f1f;
+}
+
+/* =================================== HOW WE CAN HELP U SECTION  */
+
+#how-we-can-help-you
+{
+  padding: 3vw 5vw;
+}
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text h1
+{
+  color: #4e3668;
+  font-weight: 600;
+  font-size: 2vw;
+  padding-bottom: 0.5vw;
+  /* border-bottom: 2px solid #FE320A; */
+}
+
+  #how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.6vw;
+    right: 0;
+    width: 100px;
+    height: 1px;
+    background: #ff4612;
+    bottom: 2px;
+    margin: 0 auto;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.5vw;
+    width: 50px;
+    height: 5px;
+    background: #ff4612;
+    bottom: 0px;
+    margin: 0 auto;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text p{
+  font-size: 1.2vw;
+  width: 55%;
+  margin-bottom: 2.5vw;
+  text-align: center;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-images
+{
+  display: flex;
+  gap: 2vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1
+{
+  display: flex;
+  gap: 0.5vw;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw 0;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 h2{
+  color: #FE320A;
+  padding-top: 0.8vw;
+  font-size: 1vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 h1
+{
+  color: #4e3668;
+  font-size: 1.5vw;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 p{
+  color: #252526;
+  width: 100%;
+  padding: 0 3vw;
+  text-align: center;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 button{
+  width: 150px;
+  margin-top: 0.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  height: 45px;
+  background-color: #0000eedc;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  color: #ffF;
+  transition: all 0.4s ease-in; 
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 button:hover{
+  border: 2px solid #0000ee;
+  color: #0000ee;
+  background-color: #ffF;
+}
+
+/* ======================================== FOOTER ========================================================= */
+
+#footer{
+  background-image: url(/Assests/img/footer-bg_2.webp);
+  margin-top: 2vw;
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-tint
+ {
+  background-color: #00000093;
+  background-blend-mode: multiply;
+}
+
+
+#footer .footer .request-quote
+{
+  background-color:#e4002a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#footer .footer .request-quote .reqest-quote-heading{
+  padding: 1vw 5vw;
+}
+
+#footer .footer .request-quote .reqest-quote-heading p
+{
+  color: #fff;
+  font-size: 1.5vw;
+  padding-top: 10px;
+  font-weight: 600;
+  line-height: 1.5vw;
+
+}
+#footer .footer .request-quote .reqest-quote-heading h2
+{
+  color: #fff;
+  font-size: 1.5vw;
+  margin-top: -10px;
+  line-height: 1.5vw;
+}
+#footer .footer .request-quote .request-quote-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5vw;
+}
+#footer .footer .request-quote .request-quote-button button
+{
+  background-color: #0000ee;
+  border: none;
+  transition: all 0.4s ease-in-out;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.2vw;
+  padding: 0.7vw 1.5vw;
+}
+
+#footer .footer .request-quote .request-quote-button button:hover{
+  background-color: #fff;
+  color: #0000ee;
+  border: 3px solid #0000ee;
+}
+
+.footer-links{
+  padding: 5vw 5vw;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.footer-links .address-area{
+  width: 25%;
+  /* border: 1px solid red; */
+}
+
+.footer-links .address-area h1{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+}
+.footer-links .address-area .address{
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  gap: 1.5vw;
+  margin-top: 2vw;
+}
+.footer-links .address-area .address i{
+  font-size: 1.2vw;
+}
+.footer-links .address-area .address p{
+font-weight: 500;
+  font-size: 1.2vw;
+}
+.footer-links .address-area .email i{
+  padding-top: 3px;
+  font-size: 1.2vw;
+}
+.footer-links .address-area .email p{
+font-weight: 500;
+  font-size: 1.2vw;
+}
+
+.footer-links .address-area .email{
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  gap: 1vw;
+}
+
+.footer-links .services-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links .services-area ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+
+  justify-content: center;
+  align-items: center;
+}
+.footer-links .services-area h1{
+  color: #fff;
+  margin-bottom: 2vw;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+.footer-links .services-area ul li a{
+color: #fff;
+transition: all 0.3s ease-in-out;
+font-weight: 600;
+}
+
+.footer-links .services-area ul li a:hover{
+color: #0000ee;
+transition: all 0.3s ease-in-out;
+}
+
+.quick-links-area h2{
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-links .social-media-area h1{
+  font-size: 1.5vw;
+  color: #fff;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+}
+
+.footer-links .social-media-area .social-media-icons ul
+{
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+}
+
+.footer-links .social-media-area .social-media-icons i
+{
+  font-size: 1.2vw;
+  color: #ffF;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-links .social-media-area .social-media-icons i:hover{
+  color: #0000ee;
+}
+
+/* ============================================================================================================================================================================================================================== HOME PAGE STYLE END ====================================================================== */
+
+
+/* ------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------- */
+
+/* =======================================================================  ABOUT PAGE STYLE START ====================================================================================== */
+
+#about-page1{
+  /* border: 1PX solid green; */
+  margin: 9vw 0vw 0vw 0;
+  padding: 4vw 5vw;
+}
+
+#about-page1 .about-page-about-us 
+{
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  align-items: center;
+  flex-direction: row;
+}
+
+#about-page1 .about-page-about-us .about-page-about-us-text
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+#about-page1 .about-page-about-us .about-page-about-us-text h2
+{
+  color: #E40028;
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+#about-page1 .about-page-about-us .about-page-about-us-text h1
+{
+  color: #1f1f1f;
+  font-size: 2.5vw;
+  line-height: 3vw;
+}
+#about-page1 .about-page-about-us .about-page-about-us-text h3
+{
+  color: #0000eec0;
+  font-size: 1.5vw;
+}
+#about-page1 .about-page-about-us .about-page-about-us-text p{
+  color:#1f1f1f;
+}
+
+#about-page2
+{
+  /* border: 1px solid red; */
+  padding: 2vw 8vw;
+  color: #fff;
+  background-color: #0C1239;
+}
+
+#about-page2 .about-page-about-us-1
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature1
+{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  gap:1vw;
+  width: 30%;
+
+}
+
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature2{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  gap:1vw;
+  width: 30%;
+
+}
+
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature3{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  gap:1vw;
+  width: 30%;
+
+}
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature1 .about-feature-mission
+{
+  border: 1px solid #fff;
+  padding: 15px;
+  color: #E40028;
+}
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature1 .about-feature-mission-text h2
+{
+  font-size: 25px;
+}
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature1 .about-feature-mission-text p{
+  color: #ffffffb9;
+}
+
+/* =======================================================================  ABOUT PAGE STYLE END ====================================================================================== */
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* =======================================================================  SERVICE PAGE STYLE START ====================================================================================== */
+#service-page1
+{
+  /* border: 1px solid red; */
+  margin: 5vw 0 0 0;
+  padding: 8vw 5vw 2vw 5vw;
+}
+
+#service-page1 .service-page-text{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+#service-page1 .service-page-text .service-page-text-heading
+{
+  width: 50%;
+}
+#service-page1 .service-page-text .service-page-text-heading h1{
+  font-size: 2.5vw;
+}
+#service-page1 .service-page-text .service-page-text-heading h2{
+  font-size: 1.6vw;
+}
+#service-page1 .service-page-text .service-page-text-heading h2 span{
+  font-weight: 600;
+  font-size: 1.6vw;
+  color: #E40028;
+}
+
+#service-page1 .service-page-text .service-page-text-paragraph{
+  text-transform: capitalize;
+  width: 50%;
+}
+
+
+/* ---------------------- service image section ------------------------ */
+
+#service-page2
+{
+  /* border: 1px solid green; */
+  padding: 2vw 5vw;
+  
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+  padding: 1vw 0;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1
+{
+  /* border: 1px solid red; */
+  padding: 10px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+border-radius: 10px;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1
+{
+  gap: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 img
+{
+height: 100%;
+width: 100%;
+
+}
+
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 h1{
+  /* padding-left: 2vw; */
+  color: #000;
+  font-size: 1.5vw;
+  padding-top: 15px;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 p{
+  /* padding-left: 2vw; */
+  font-size: 1vw;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 a{
+  /* padding-left: 2vw; */
+  color: #E40028;
+  font-size: 1vw;
+}
+
+#service-page3
+{
+  /* border: 1px solid green; */
+  padding: 5vw 5vw;
+}
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-heading h1{
+  text-align: center;
+  font-family: sans-serif;
+  color: #1f1f1f;
+  
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-heading hr{
+  color: #0000ee;
+  text-align: center;
+  margin: 0 40vw;
+  color: #E40028;
+  height: 3px;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features
+{
+  display: flex;
+  flex-direction: row;
+  padding: 5vw 0 0 0;
+  gap: 5vw;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  /* border: 1px solid green; */
+  width: 30%;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1 i{
+  font-size: 50px;
+  color: #E40028;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1 h1
+{
+  font-size: 1.7vw;
+  color: #000;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1 p{
+  text-align: center;
+}
+
+
+/* =======================================================================  SERVICE PAGE STYLE END ====================================================================================== */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* =======================================================================  CONTACT PAGE STYLE START ====================================================================================== */
+
+#contact-page
+{
+  /* border: 5px solid red; */
+  margin: 10vw 0 2vw 0;
+  padding: 5vw 10vw;
+}
+
+#contact-page .contact-page-heading h1{
+  font-size: 3.5vw;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+#contact-page .contact-page-heading h2{
+  font-size: 1.5vw;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: #0000ee;
+  margin-bottom: 35px;
+}
+
+#contact-page .contact-page-form-map
+{
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#contact-page .contact-page-form-map .contact-page-form{
+  width: 50%;
+}
+#contact-page .contact-page-form-map .contact-page-form form{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+#contact-page .contact-page-form-map .contact-page-form form label
+{
+  color: #017ac3;
+  font-size: 18px;
+}
+
+#contact-page .contact-page-form-map .contact-page-form form select{
+  height: 40px;
+}
+#contact-page .contact-page-form-map .contact-page-form form textarea{
+  resize: none;
+  outline-color: #E40028;
+}
+
+#contact-page .contact-page-form-map .contact-page-form form input{
+  border-top: none;
+  border-left: none;
+  height: 40px;
+  outline-color: #e4002ac8;
+  border-right: none;
+}
+
+#contact-page .contact-page-form-map .contact-page-form form button{
+  width: 150px;
+  height: 42px;
+  color: #fff;
+  background-color: #FE320A;
+  border: none;
+  text-transform: uppercase;
+  padding: 5px;
+  transition: all ease-in-out 0.3s;
+  font-weight: 600;
+}
+
+#contact-page .contact-page-form-map .contact-page-form form button:hover{
+  background-color: #fff;
+  color: #FE320A;
+  border: 2px solid #FE320A;
+}
+
+
+/* =======================================================================  CONTACT PAGE STYLE END ====================================================================================== */
+
+
+
+#loader{
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  transition: all ease 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader h1{
+  font-size: 4vw;
+  color: transparent;
+  background: linear-gradient(to right,orange,orangered);
+  -webkit-background-clip: text;
+  position: absolute;
+  opacity: 0;
+  animation-name: load;
+  animation-duration: 1s;
+  text-align: center;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+
+#loader h1:nth-child(2){
+  animation-delay: 2s;
+}
+
+#loader h1:nth-child(3){
+  animation-delay: 3s;
+}
+#loader h1:nth-child(4){
+  animation-delay: 4s;
+}
+#loader h1:nth-child(5){
+  animation-delay: 5s;
+}
+
+@keyframes load {
+  0%{
+      opacity: 0;
+  }
+  10%{
+      opacity: 1;
+  }
+  90%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+@media (max-width:600px) {
+  #loader h1{
+      font-size: 9vw;
+    
+  }
+}

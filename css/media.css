@@ -1,0 +1,988 @@
+
+@media screen and (max-width:500px){
+
+
+  /* ---------------------------------------- HOME MEDIA QUERIES ---------------------------------- */
+
+  header .sub-nav{
+    display: none;
+  }
+
+  /* body{
+    border: 2px solid green;
+  } */
+
+header nav .nav__data a img{
+    height: 15vh;
+  }
+  /* header{
+    border: 2px solid red;
+  } */
+
+  #home-tracking-section .tracking-div .home-tracking-heading h1
+  {
+      font-size: 4.9vw;
+      padding-bottom: 0.5vw;
+  }
+
+      #home-tracking-section .tracking-div .home-tracking-heading p
+      {
+      font-size: 2.4vw;
+      padding-bottom: 1vw;
+      text-align: center;
+      }
+
+      #home-tracking-section .tracking-div .home-tracking-input
+      {
+      flex-direction: column;
+      padding-top: 1.5vw;
+      gap: 3.5vw;
+      }
+
+      #home-tracking-section .tracking-div .home-tracking-input input
+      {
+      outline: none;
+      height: 8vw;
+      width: 100%;
+      }
+
+      #home-tracking-section .tracking-div .home-tracking-input input::placeholder{
+      padding-left: 1vw;
+      color: #1f1f1f;
+      }
+
+      #home-tracking-section .tracking-div .home-tracking-input button{
+      width: 65%;
+      cursor: pointer;
+      color: #fff;
+      font-weight: 600;
+      background-color: #FE320A;
+      border: none;
+      transition: 0.3s ease-in;
+      height: 9vw;
+      }
+      #home-tracking-section .tracking-div .home-tracking-input button:hover
+      {
+      background-color: white;
+      border: 2px solid #FE320A;
+      color: #FE320A;
+      }
+      .carousel{
+        background-color: #1f1f1f;
+      }
+
+      .banner-carousel{
+        margin-top: 0vw;
+        width: 100%;
+        height: 40vh;
+      }
+
+      .overlay-container {
+        display: none;
+      }
+
+      .carousel-inner{
+        width: 100%;
+        height: 100%;
+        /* border: 2px solid green; */
+      }
+
+      .carousel-inner .carousel-item img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        /* height: 500px; */
+      }
+      .carousel-caption {
+        top: 25vw;
+      }
+
+      #home-about-section{
+        height: 500px;
+        /* padding: 3vw 0; */
+        /* border: 1px solid red; */
+      }
+      .carousel .carousel-inner .carousel-item .carousel-caption p{
+        display: block;
+      }
+
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div{
+        width: 90vw;
+        height: 100%;
+        border-radius: 20px;
+        margin-left: 4.5vw;
+        flex-direction: column;
+        height: 100%;
+        gap: 5vw;
+      }
+
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-img
+      {
+      width: 100%;
+      }
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-img img{
+        width: 100%;
+        height: 100%;
+        padding: 5vw;
+        object-fit: contain;
+      }
+
+      
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text{
+        padding: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text h2{
+        font-size: 25px;
+        text-align: center;
+        padding-bottom: 1vw;
+      }
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text h6{
+        font-size: 12px;
+        text-align: center;
+      }
+
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text p{
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+      }
+
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text button{
+        transition: all 0.3s ease-in;
+        background-color: #0000ee;
+        color: #fff;
+        width: 100px;
+        height: 40px;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 2.5vw;
+        margin-top: 1vw;
+      }
+      #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text button:hover{
+        background-color: #fff;
+        border: 2px solid #0000ee;
+        color: #0000ee;
+      }
+
+      /* ================= home service section =========== */
+
+      #home-service-section{
+        /* border: 5px solid #0000ee; */
+        padding: 5vw 0vw;
+        padding-right: 5vw;
+      }
+
+      .home-service-section-div-image-info .image{
+        position: relative;
+        /* width: 250px; */
+        width: 100%;
+      }
+
+      #home-service-section .home-service-section-div .home-service-section-text {
+        padding: 2vw 5vw;
+      }
+
+      #home-service-section .home-service-section-div .home-service-section-text h1
+      {
+      font-size: 3vw;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+      }
+
+      #home-service-section .home-service-section-div .home-service-section-text .home-service-section-main-text
+      {
+        flex-direction: column;
+        gap: 3vw;
+        margin-bottom: 5vw;
+      }
+
+      #home-service-section .home-service-section-div .home-service-section-text .home-service-section-main-text h2{
+        font-size: 5vw;
+      }
+
+      .home-service-section-div-image-info {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* flex-direction: row;
+        justify-content: space-between; */
+        gap: 3vw;
+        padding-left: 4vw;
+      }
+
+      .home-service-section-div-image-info .wrapper:nth-child(3){
+        display: none;
+      }
+      /* .home-service-section-div-image-info1 .wrapper:nth-child(3){
+        display: none;
+      } */
+
+      .home-service-section-div-image-info .content i{
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+      
+      .home-service-section-div-image-info .content h1{
+        font-size: 10px;
+      }
+      
+      .home-service-section-div-image-info .content p{
+        text-align: center;
+        font-size: 8px;
+        color: #fff;
+      }
+      .home-service-section-div-image-info .content a
+      {
+        text-align: center;
+        font-size: 2vw;
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+      }
+
+       /* ===============================  FEATURE IMAGE INFO =============================== */
+.your-package-rules-features
+{
+  padding: 2.5vw 1.5vw;
+}
+
+#your-package-your-rules .your-package-rules .your-package-rules-text h2
+{
+font-size: 3.5vw;
+}
+
+#your-package-your-rules .your-package-rules .your-package-rules-text h1{
+  font-size: 4vw;
+  font-weight: 600;
+  width: 60%;
+  margin-bottom: 2.5vw;
+}
+
+.your-package-rules-features .your-package-rules-features1{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1vw 5vw;
+  /* background-color: black; */
+  /* border: 1px solid red; */
+}
+
+.your-package-rules-features2{
+  margin-top: 3.5vw;
+}
+
+.your-package-rules-features .transparency-pricing
+{
+  gap: 1.5vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.your-package-rules-features .transparency-pricing i{
+  font-size: 6.5vw;
+}
+
+.your-package-rules-features .transparency-pricing h1{
+  font-size: 3.5vw;
+}
+
+.your-package-rules-features .transparency-pricing h1:hover{
+  color: #E40028;
+  font-size: 3.5vw;
+}
+
+.your-package-rules-features .transparency-pricing p{
+  font-size: 2.9vw;
+  /* text-align: cente; */
+}
+/* =================================== HOW WE CAN HELP U SECTION  */
+
+#how-we-can-help-you
+{
+  padding: 3vw 5vw;
+}
+
+#how-we-can-help-you .how-we-can-help-you-images .how-we-can-help-you-image1{
+  padding: 5vw 0vw;
+}
+
+#how-we-can-help-you .how-we-can-help-you-images .how-we-can-help-you-image1 img{
+  width: 100%;
+  height: 100%;
+  padding: 1vw 5vw;
+}
+
+
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text h1
+{
+  color: #4e3668;
+  font-weight: 600;
+  font-size: 4.5vw;
+}
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text h1::before{
+  top: 6.5vw;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text h1::after{
+  top: 6vw;
+
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-can-help-you-text .how-can-help-you-heading-text p{
+  font-size: 2.9vw;
+  width: 80%;
+  margin-bottom: 5vw;
+  text-align: center;
+}
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-images
+{
+  display: flex;
+  gap: 15vw;
+  /* border: 1px solid red; */
+  flex-direction: column;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 h2{
+  font-size: 2.5vw;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 h1
+{
+  font-size: 4.5vw;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 button{
+  width: 150px;
+  margin-top: 0.5vw;
+  font-weight: 600;
+  cursor: pointer;
+  height: 45px;
+  background-color: #0000eedc;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  color: #ffF;
+  transition: all 0.4s ease-in; 
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 button:hover{
+  border: 2px solid #0000ee;
+  color: #0000ee;
+  background-color: #ffF;
+}
+
+#footer{
+  margin-top: 10vw;
+  width: 100%;
+  height: 100%;
+}
+
+#footer .footer .request-quote
+{
+  padding: 3vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+#footer .footer .request-quote .reqest-quote-heading p
+{
+  font-size: 3.9vw;
+  padding-bottom: 1vw;
+}
+
+#footer .footer .request-quote .reqest-quote-heading h2{
+  font-size: 15px;
+  line-height: 15px;
+}
+
+#footer .footer .request-quote .request-quote-button button{
+  font-size: 2.9vw;
+  width: 100%;
+  height: 40px;
+  padding: 2vw 5vw;
+}
+.footer-links{
+  padding: 8vw 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
+}
+.footer-links .address-area{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+}
+.footer-links .address-area .address{
+  gap: 2vw;
+}
+
+.footer-links .address-area h1{
+  font-size: 18px;
+}
+.footer-links .address-area .address i{
+  font-size: 3vw;
+}
+.footer-links .address-area .address p{
+  font-size: 14px;
+}
+.footer-links .address-area .email i{
+  padding-top: 3px;
+  font-size: 3.5vw;
+  
+}
+.footer-links .address-area .email p{
+  font-size: 14px;
+}
+.footer-links .address-area .email{
+  gap: 2vw;
+}
+
+.footer-links .services-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer-links .services-area ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer-links .services-area h1{
+  font-size: 18px;
+}
+
+.quick-links-area h2{
+  font-size: 18px;
+}
+
+.footer-links .social-media-area h1{
+  font-size: 18px;
+}
+
+.footer-links .social-media-area .social-media-icons ul
+{
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.footer-links .social-media-area .social-media-icons i
+{
+  font-size: 3.5vw;
+}
+    /* ================================= HOME PAGE MEDIA QUERY END ============================================= */
+
+/* -------------------------------- ABOUT PAGE MEDIA QUERIES START ----------------------- */
+
+#about-page1{
+  /* border: 1PX solid green; */
+  margin: 9vw 0vw 0vw 0;
+  padding: 4vw 5vw;
+}
+
+#about-page1 .about-page-about-us 
+{
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+#about-page1 .about-page-about-us .about-page-about-us-img img{
+  width: 100%;
+  height: 100%;
+}
+#about-page1 .about-page-about-us .about-page-about-us-text h2
+{
+  font-size: 15px;
+}
+
+#about-page1 .about-page-about-us .about-page-about-us-text h1
+{
+  font-size: 20px;
+  line-height: 20px;
+}
+#about-page1 .about-page-about-us .about-page-about-us-text h3
+{
+  font-size: 15px;
+}
+#about-page2
+{
+  /* border: 1px solid red; */
+  padding: 8vw 8vw;
+  color: #fff;
+  background-color: #0C1239;
+}
+#about-page2 .about-page-about-us-1
+{
+  flex-direction: column;
+  gap: 20px;
+}
+
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature1
+{
+  gap:15px;
+  width: 100%;
+
+}
+
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature2{
+  gap:15px;
+  width: 100%;
+
+}
+
+#about-page2 .about-page-about-us-1 .about-page-about-us-feature3{
+  gap:15px;
+  width: 100%;
+
+}
+
+/* ======================================  ABOUT PAGE MEDIA QUERIES END ============================================================== */
+
+
+/* ============================================ SERVICE PAGE MEDIA QUERIES START ======================================================== */
+
+#service-page1
+{
+  /* border: 1px solid red; */
+  margin: 5vw 0 0 0;
+  padding: 8vw 5vw 2vw 5vw;
+}
+
+#service-page1 .service-page-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+#service-page1 .service-page-text .service-page-text-heading
+{
+  width: 100%;
+}
+#service-page1 .service-page-text .service-page-text-heading h1{
+  font-size: 4.5vw;
+  
+}
+#service-page1 .service-page-text .service-page-text-heading h2{
+  font-size: 3vw;
+}
+#service-page1 .service-page-text .service-page-text-heading h2 span{
+  font-weight: 600;
+  font-size: 3vw;
+  color: #E40028;
+}
+
+#service-page1 .service-page-text .service-page-text-paragraph{
+  text-transform: capitalize;
+  width: 100%;
+}
+
+
+#service-page2
+{
+  /* border: 1px solid green; */
+  padding: 2vw 5vw;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 5vw 15px;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1
+{
+border-radius: 10px;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 h1{
+  /* padding-left: 2vw; */
+  color: #000;
+  font-size: 4.5vw;
+  padding-top: 15px;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 p{
+  /* padding-left: 2vw; */
+  font-size: 3vw;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1 a{
+  /* padding-left: 2vw; */
+  color: #E40028;
+  font-size: 3vw;
+}
+
+#service-page2 .service-page2-image-info .service-page2-service-image-section-1 .service-page2-service-image1
+{
+  gap: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+#service-page3
+{
+  /* border: 1px solid green; */
+  padding: 10vw 5vw;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features
+{
+  display: flex;
+  flex-direction: column;
+  padding: 5vw 0 0 0;
+  gap: 5vw;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  /* border: 1px solid green; */
+  width: 100%;
+  padding: 4vw 0 0 0 ;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1 i{
+  font-size: 50px;
+  color: #E40028;
+}
+
+#service-page3 .service-page-three-step-processing .service-page-three-step-processing-features .service-page-three-step-processing-feature1 h1
+{
+  font-size: 20px;
+  color: #000;
+}
+
+/* ==============================================  SERVICE PAGE MEDIA QUERIES END ========================================================== */
+
+/* =======================================================================  CONTACT PAGE STYLE START ====================================================================================== */
+
+#contact-page
+{
+  /* border: 5px solid red; */
+  margin: 10vw 0 2vw 0;
+  padding: 5vw 10vw;
+}
+
+#contact-page .contact-page-heading h1{
+  font-size: 25px;
+}
+
+#contact-page .contact-page-heading h2{
+  font-size: 15px;
+}
+#contact-page .contact-page-form-map
+{
+  flex-direction: column;
+  gap: 50px;
+}
+#contact-page .contact-page-form-map .contact-page-form{
+  width:100%;
+}
+#contact-page .contact-page-form-map .contact-page-form form{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.contact-page-form-map .contact-page-map{
+  width: 100%;
+  height: 100%;
+}
+
+.contact-page-form-map .contact-page-map .contact-map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:501px) and (max-width:768px){
+  /* ============================= HOME PAGE MEIDA QUERIES ======================================= */
+    /* body{
+    border: 2px solid green;
+  } */
+
+  .carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 2vw;
+    /* line-height: 1.9; */
+  }
+
+  header .sub-nav{
+    display: none;
+  }
+
+  header nav .nav__data a img{
+    height: 10vh;
+  }
+  #home-tracking-section{
+    margin-top: 1vw;
+  }
+  #home-tracking-section .tracking-div .home-tracking-heading h1
+  {
+      font-size: 5vw;
+      padding-bottom: 0.5vw;
+  }
+  #home-tracking-section .tracking-div .home-tracking-heading p
+      {
+      font-size: 2vw;
+      padding-bottom: 1vw;
+      text-align: center;
+      }
+
+      #home-tracking-section .tracking-div .home-tracking-input input
+      {
+      height: 45px;
+      width: 100%;
+      }
+
+      #home-tracking-section .tracking-div .home-tracking-input button{
+        width: 150px;
+        height: 43.5px;
+        }
+  .overlay-container {
+    display: none;
+  }
+
+  .carousel-caption {
+    top: 15vw;
+  }
+
+  #home-about-section{
+    height: 100%;
+    padding-bottom: 2vw;
+    border: 1px solid red;
+  }
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div{
+    width: 90vw;
+    height: 100%;
+    border-radius: 20px;
+    margin-left: 4.5vw;
+    flex-direction: row;
+    height: 100%;
+    gap: 2vw;
+  }
+
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text{
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-img img{
+    width: 250px;
+    height: 300px;
+    padding: 2vw;
+    object-fit: contain;
+  }
+
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text h2{
+    font-size: 3vw;
+    text-align: center;
+    padding-bottom: 0.5vw;
+  }
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text h6{
+    font-size: 1.5vw;
+    text-align: center;
+  }
+
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text p{
+    font-size: 1.8vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  #swiper-2 .swiper-wrapper .swiper-slide .home-about-div .home-about-div-text button{
+    font-weight: 600;
+    font-size: 1.5vw;
+    margin-top: 0vw;
+  }
+
+  #home-service-section{
+    padding: 5vw 2vw 4vw 0vw;
+  }
+    .home-service-section-div-image-info {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1vw;
+        
+      }
+
+      .home-service-section-div-image-info .wrapper:nth-child(3){
+        display: none;
+      }
+
+      .home-service-section-div-image-info .content i{
+        font-size: 4.5vw;
+        padding-bottom: 10px;
+      }
+      
+      .home-service-section-div-image-info .content h1{
+        font-size: 2vw;
+      }
+      
+      .home-service-section-div-image-info .content p{
+        text-align: center;
+        padding: 0 50px;
+        font-size: 1.5vw;
+        color: #fff;
+      }
+      .home-service-section-div-image-info .content a
+      {
+        text-align: center;
+        font-size: 1.7vw;
+        transition: all 0.3s ease-in-out;
+        color: #fff;
+      }
+
+      #how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-images
+{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15vw;
+  /* border: 1px solid red; */
+  flex-direction: column;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 h2{
+  font-size: 1.5vw;
+}
+
+#how-we-can-help-you .how-we-can-help-you-div .how-we-can-help-you-image1 h1
+{
+  font-size: 3vw;
+}
+
+/* ========================================== HOME PAGE MEDIA QUERIES END ================================ */
+
+/* -------------------------------- ABOUT PAGE MEDIA QUERIES START ----------------------- */
+
+#about-page1{
+  border: 1PX solid green;
+  margin: 9vw 0vw 0vw 0;
+  padding: 8vw 5vw;
+}
+
+#about-page1 .about-page-about-us 
+{
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+#about-page1 .about-page-about-us .about-page-about-us-text h2
+{
+  color: #E40028;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+#about-page1 .about-page-about-us .about-page-about-us-text h1
+{
+  color: #1f1f1f;
+  font-size: 3vw;
+  line-height: 3vw;
+}
+#about-page1 .about-page-about-us .about-page-about-us-text h3
+{
+  color: #0000eec0;
+  font-size: 1.9vw;
+}
+
+/* ======================================  ABOUT PAGE MEDIA QUERIES END ============================================================== */
+
+
+/* ============================================ SERVICE PAGE MEDIA QUERIES START ======================================================== */
+
+
+
+/* ==============================================  SERVICE PAGE MEDIA QUERIES END ========================================================== */
+
+
+/* =======================================================================  CONTACT PAGE STYLE START ====================================================================================== */
+
+#contact-page
+{
+  /* border: 5px solid red; */
+  margin: 10vw 0 2vw 0;
+  padding: 5vw 10vw;
+}
+
+#contact-page .contact-page-heading h1{
+  font-size: 25px;
+}
+
+#contact-page .contact-page-heading h2{
+  font-size: 15px;
+}
+#contact-page .contact-page-form-map
+{
+  flex-direction: column;
+  gap: 50px;
+}
+#contact-page .contact-page-form-map .contact-page-form{
+  width:100%;
+}
+#contact-page .contact-page-form-map .contact-page-form form{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.contact-page-form-map .contact-page-map{
+  width: 100%;
+  height: 100%;
+}
+
+.contact-page-form-map .contact-page-map .contact-map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+}
